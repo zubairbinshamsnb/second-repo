@@ -3,6 +3,9 @@ printf '<!DOCTYPE html>
 <html>
 <head><title>Env Demo</title></head>
 <body>
+    # add a welcome line to the body
+    awk 'NR==6{print "<p>Welcome! Deployed via dev → staging → main.</p>"}1' index.html > tmp && mv tmp index.html
+
 <h1>Hello from MAIN</h1>
 <p>Version: 1.0</p>
 </body>
