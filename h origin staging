@@ -1,0 +1,26 @@
+[1mdiff --git a/index.html b/index.html[m
+[1mindex 7340d1f..ef15a98 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -1,8 +1,11 @@[m
+[32m+[m[32mprintf '<!DOCTYPE html>[m
+ <html>[m
+ <head><title>Env Demo</title></head>[m
+ <body>[m
+[32m+[m[32m    # add a welcome line to the body[m
+[32m+[m[32m    awk 'NR==6{print "<p>Welcome! Deployed via dev → staging → main.</p>"}1' index.html > tmp && mv tmp index.html[m
+[32m+[m
+ <h1>Hello from MAIN</h1>[m
+ <p>Version: 1.0</p>[m
+[31m-<h1>add staging button</h1>[m
+ </body>[m
+[31m-</html>[m
+\ No newline at end of file[m
+[32m+[m[32m</html>[m
+[1mdiff --git a/second-repo b/second-repo[m
+[1mnew file mode 160000[m
+[1mindex 0000000..fa790b8[m
+[1m--- /dev/null[m
+[1m+++ b/second-repo[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mSubproject commit fa790b88303b9eb831d9902d88fa26da91f86c69[m
