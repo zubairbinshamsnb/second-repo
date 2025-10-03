@@ -1,9 +1,22 @@
+<<<<<<< HEAD
 cat > index.html << 'EOF'
+=======
+>>>>>>> 7a6917684a9dec62462f49b0c62649581cdd90ae
 printf '<!DOCTYPE html>
 <html>
 <head><title>Env Demo</title></head>
 <body>
+<<<<<<< HEAD
 <h1>Hello from MAIN</h1>
 <p>Version: 1.0</p>
 </body>
 </html>
+=======
+    # add a welcome line to the body
+    awk 'NR==6{print "<p>Welcome! Deployed via dev → staging → main.</p>"}1' index.html > tmp && mv tmp index.html
+
+<h1>Hello from MAIN</h1>
+<p>Version: 1.0</p>
+</body>
+</html>
+>>>>>>> 7a6917684a9dec62462f49b0c62649581cdd90ae
